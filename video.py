@@ -49,7 +49,7 @@ while(1):
     #cv.imshow('res',res)
 
     # Bounding Box
-    '''
+    
     gray = cv.cvtColor(res, cv.COLOR_BGR2GRAY)
 
     ret,thresh = cv.threshold(gray,127,255,0)
@@ -60,7 +60,7 @@ while(1):
         x,y,w,h = cv.boundingRect(cnt)
         cv.rectangle(res,(x,y),(x+w,y+h),(0,255,0),2)
     cv.imshow('res',res)
-    '''
+    
 
     # Dominant Color
     
@@ -74,10 +74,8 @@ while(1):
     plt.axis("off")
     plt.imshow(bar)
     plt.show()
-    
-    #cv.imshow('frame',frame)
 
-    #plt.waitKey()
+
     k = cv.waitKey(5) & 0xFF
     if k == 27:
         break
